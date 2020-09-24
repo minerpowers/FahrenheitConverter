@@ -7,17 +7,24 @@ public class TempConverter {
 	public TempConverter() {
 		super();
 	}
-	public TempConverter(double f) {
+	public TempConverter(double f, double c) {
 		super();
-		this.f = f;
-		setC(f);
-		setK(f);
+		if (f!=0) {
+			this.f = f;
+			setC(f);
+			setK(this.c);
+		}
+		else {
+			this.c = c;
+			setF(c);
+			setK(c);
+		}
 	}
 	public double getF() {
 		return f;
 	}
-	public void setF(double f) {
-		this.f = f;
+	public void setF(double c) {
+		this.f = (c*9/5)+32;
 	}
 	public double getC() {
 		return c;
@@ -28,8 +35,8 @@ public class TempConverter {
 	public double getK() {
 		return k;
 	}
-	public void setK(double f) {
-		this.k = ((f-32)*5/9)+273.15;
+	public void setK(double c) {
+		this.k = c+273.15;
 	}
 	@Override
 	public String toString() {

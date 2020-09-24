@@ -15,14 +15,15 @@
 			margin-left : auto;
 			margin-right : auto;
 			width : 50%;
+			hight :50%;
 		}
 	</style>
 </head>
 <body>
 	<div>
 		<p>
-		${userTemp.getF()} &deg; Fahrenjeit is:<br/>
-		${userTemp.getC()} &deg; celsius.<br/>
+		${userTemp.getC()} &deg; celsius is:<br/>
+		${userTemp.getF()} &deg; fahrenheit.<br/>
 		${userTemp.getK()} &deg; kalvin.<br/>
 		</p>
 		<a href="Index.jsp">Calculate another temperature</a>

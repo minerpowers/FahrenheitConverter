@@ -6,55 +6,34 @@
 		<meta charset="UTF-8">
 		<title>Fahrenheit Converter</title>
 		<style type="text/css">
-			.tempForm{
+			.outside{
 				background : lightgrey;
 				box-sizing : border-box;
+				text-align : center;
 				border : black thin solid;
 				margin-left : auto;
 				margin-right : auto;
 				width : 50%;
 			}
-			h1{
-				text-align : center;
-				margin-top : 5px;
-				margin-bottom : 5px;
-			}
-			p{
-				text-align : center;
-				margin-top : 0px;
-				margin-bottom : 5px;
-			}
-			.tempForm form{
-				margin-left : auto;
-				margin-right : auto;
-			}
-			.tempInput{
-				margin-bottom : 5px;
-				text-align : center;
-			}
-			button{
-				background-color : lightblue;
+			.inside{
+				margin : 20px 50px;
+				background : lightblue;
 				border : black thin solid;
-				border-radius: 15%;
 			}
-			input[type="text"] {
-				margin-left : auto;
-				border : black thin solid;
-				border-radius: 15%;
-				text-align : center;
+			a {
+				margin : 10px auto;
+				display : block;	
 			}
 		</style>
 	</head>
 	<body>
-		<div class="tempForm">
-			<h1>Fahrenheit Converter</h1>
-			<form action="getTempServlet" method="post">
-				<p>Enter temperature in fahrenheit:</p>
-				<div class="tempInput">
-					<input type="text" name="userTemp" size="10">
-					<button value="CalcTemp">Enter</button>
-				</div>
-			</form>
+		<div class="outside">
+			<div class="inside">
+				<a href="Fahrenheit.jsp">Fahrenheit Converter</a>
+			</div>
+			<div class="inside">
+				<a href="Celsius.jsp">Celsius Converter</a>
+			</div>
 		</div>
 	</body>
 </html>

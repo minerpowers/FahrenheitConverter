@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletResponse;
 import model.TempConverter;
 
 /**
- * Servlet implementation class getTempServlet
+ * Servlet implementation class getCelsiusServlet
  */
-@WebServlet("/getTempServlet")
-public class getTempServlet extends HttpServlet {
+@WebServlet("/getCelsiusServlet")
+public class getCelsiusServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public getTempServlet() {
+    public getCelsiusServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,9 +30,9 @@ public class getTempServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String userTemp = request.getParameter("userTemp");
-		TempConverter temperature = new TempConverter(Double.parseDouble(userTemp),0);
+		TempConverter temperature = new TempConverter(0, Double.parseDouble(userTemp));
 		request.setAttribute("userTemp", temperature);
-		getServletContext().getRequestDispatcher("/resultsF.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/resultsC.jsp").forward(request, response);
 	}
 
 }
